@@ -37,3 +37,8 @@ TARGET_VENDOR_PRODUCT_NAME := onyx
 # FMRadio
 PRODUCT_PACKAGES += \
     FMRadio
+	
+# Broken Device Maintainers
+PRODUCT_BUILD_PROP_OVERRIDES += \
+	DEVICE_MAINTAINERS="Nimit Mehta (CheckYourScreen)"
+	

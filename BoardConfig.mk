@@ -43,10 +43,10 @@ GRAPHITE_OPTS := false
 ENABLE_GCCONLY := false
 
 # Kernel Toolchain
-KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-eabi-4.9-uber/bin
-KERNEL_TOOLCHAIN_PREFIX := arm-eabi-
+#  KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-eabi-4.8/bin
+#  KERNEL_TOOLCHAIN_PREFIX := arm-eabi-
 # Rom Toolchain
-TARGET_GCC_VERSION_EXP := 4.9-uber
+#  TARGET_GCC_VERSION_EXP := 4.9-uber
 
 # Kernel
 BOARD_KERNEL_BASE := 0x00000000
@@ -58,7 +58,7 @@ TARGET_CUSTOM_DTBTOOL := dtbToolonyx
 TARGET_KERNEL_ARCH := arm
 TARGET_KERNEL_CONFIG := cm_onyx_defconfig
 TARGET_KERNEL_SOURCE := kernel/oneplus/onyx
-#TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-linux-androideabi-
+TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-linux-androideabi-
 
 # ANT+
 BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
@@ -198,3 +198,5 @@ TARGET_LDPRELOAD := libNimsWrap.so
 BLOCK_BASED_OTA := false
 
 -include vendor/oneplus/onyx/BoardConfigVendor.mk
+
+FUCK_XDA=true
