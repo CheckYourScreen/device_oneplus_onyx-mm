@@ -199,4 +199,3 @@ BLOCK_BASED_OTA := false
 
 -include vendor/oneplus/onyx/BoardConfigVendor.mk
 
-FUCK_XDA=true
