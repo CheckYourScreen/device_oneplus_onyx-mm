@@ -12,6 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# Get the prebuilt list of APNs
+$(call inherit-product, vendor/omni/config/gsm.mk)
+
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
@@ -20,6 +23,15 @@ $(call inherit-product, device/oneplus/onyx/device.mk)
 
 # Inherit some common GZR stuff.
 $(call inherit-product, vendor/omni/config/common_full_phone.mk)
+
+# must be before including omni part
+TARGET_BOOTANIMATION_SIZE := 1080x608
+
+# compile SnapdragonCamera instead of Camera2
+TARGET_USES_SNAPDRAGONCAMERA := true
+
+# Use AOSP browser rather than Chromium
+TARGET_USES_AOSP_BROWSER := true
 
 # Call the proprietary setup
 $(call inherit-product-if-exists, vendor/oneplus/onyx/onyx-vendor.mk)
@@ -36,7 +48,10 @@ TARGET_VENDOR_PRODUCT_NAME := onyx
 
 # FMRadio
 PRODUCT_PACKAGES += \
-    FMRadio
+    FMRadio \
+    AntHalService \
+    com.dsi.ant.antradio_library \
+    libantradio
 
 
 	
