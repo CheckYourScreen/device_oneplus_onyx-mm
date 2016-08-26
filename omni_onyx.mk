@@ -21,8 +21,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from onyx device
 $(call inherit-product, device/oneplus/onyx/device.mk)
 
-# Inherit some common GZR stuff.
-$(call inherit-product, vendor/omni/config/common_full_phone.mk)
+# Inherit some common stuff.
+$(call inherit-product, vendor/omni/config/common.mk)
 
 # must be before including omni part
 TARGET_BOOTANIMATION_SIZE := 1080x608
