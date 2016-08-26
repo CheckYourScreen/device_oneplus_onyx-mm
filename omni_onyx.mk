@@ -49,9 +49,9 @@ TARGET_VENDOR_PRODUCT_NAME := onyx
 # FMRadio
 PRODUCT_PACKAGES += \
     FMRadio \
-    AntHalService \
-    com.dsi.ant.antradio_library \
-    libantradio
+    AntHalService 
+    # com.dsi.ant.antradio_library \
+    # libantradio
 
 
 	
