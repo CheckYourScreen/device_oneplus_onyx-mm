@@ -1,7 +1,7 @@
 [
   {
     "remote": "github",
-    "repository": " CheckYourScreen/Arsenic.Kernel",
+    "repository": "CheckYourScreen/Arsenic.Kernel",
     "target_path": "kernel/oneplus/onyx",
     "revision": "stable"
   },
@@ -9,7 +9,7 @@
     "remote": "github",
     "repository": "onyx-device/device_oppo_common",
     "target_path": "device/oppo/common",
-    "revision": " broken"
+    "revision": "broken"
   },
   {
     "remote": "github",
