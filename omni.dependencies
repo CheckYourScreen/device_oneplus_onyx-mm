@@ -97,24 +97,6 @@
   },
   {
     "remote": "github",
-    "repository": "ant-wireless/Android_antradio-library",
-    "target_path": "external/ant-wireless/antradio-library",
-    "revision": "master"
-  },
-  {
-    "remote": "github",
-    "repository": "ant-wireless/Linux_ant-hal",
-    "target_path": "external/ant-wireless/ant-hal",
-    "revision": "master"
-  },
-  {
-    "remote": "github",
-    "repository": "ant-wireless/Android_ANTHALService",
-    "target_path": "external/ant-wireless/ANTHALService",
-    "revision": "master"
-  },
-  {
-    "remote": "github",
     "repository": "ant-wireless/Android_ANTRadioService",
     "target_path": "external/ant-wireless/ANTRadioService",
     "revision": "master"
@@ -124,11 +106,5 @@
     "repository": "ant-wireless/Android_ANTPlusPluginsService",
     "target_path": "external/ant-wireless/Android_ANTPlusPluginsService",
     "revision": "master"
-  },
-  {
-    "remote": "github",
-    "repository": "xc-racer99/android_hardware_qcom_fm",
-    "target_path": "hardware/qcom/fm",
-    "revision": "android-6.0"
   }
 ]
