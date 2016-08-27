@@ -25,7 +25,7 @@ $(call inherit-product, device/oneplus/onyx/device.mk)
 $(call inherit-product, vendor/omni/config/common.mk)
 
 # must be before including omni part
-TARGET_BOOTANIMATION_SIZE := 1080x608
+TARGET_BOOTANIMATION_SIZE := 1080x720
 
 # compile SnapdragonCamera instead of Camera2
 TARGET_USES_SNAPDRAGONCAMERA := true
