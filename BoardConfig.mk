@@ -172,7 +172,7 @@ BOARD_RIL_CLASS += ../../../device/oneplus/onyx/ril
 TARGET_NO_RPC := true
 
 # SELinux
-# include device/qcom/sepolicy/sepolicy.mk
+include device/qcom/sepolicy/sepolicy.mk
 
 BOARD_SEPOLICY_DIRS += \
     $(PLATFORM_PATH)/sepolicy
@@ -193,6 +193,9 @@ WIFI_DRIVER_FW_PATH_AP := "ap"
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 TARGET_LDPRELOAD := libNimsWrap.so
+
+# TWRP
+TW_THEME := portrait_hdpi
 
 # To be removed
 BLOCK_BASED_OTA := false
