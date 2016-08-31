@@ -227,5 +227,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     wcnss_service
 
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+	persist.sys.usb.config=mtp
+
 # Inherit from oppo-common
 $(call inherit-product, device/oppo/common/common.mk)
