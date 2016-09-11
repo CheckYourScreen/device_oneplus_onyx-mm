@@ -18,13 +18,13 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from onyx device
 $(call inherit-product, device/oneplus/onyx/device.mk)
 
-# Inherit some common GZR stuff.
-$(call inherit-product, vendor/broken/config/common_full_phone.mk)
+# Inherit some common stuff.
+$(call inherit-product, vendor/candy/config/common_full_phone.mk)
 
 # Call the proprietary setup
 $(call inherit-product-if-exists, vendor/oneplus/onyx/onyx-vendor.mk)
 
-PRODUCT_NAME := broken_onyx
+PRODUCT_NAME := candy_onyx
 PRODUCT_DEVICE := onyx
 PRODUCT_MANUFACTURER := OnePlus
 
@@ -34,11 +34,3 @@ PRODUCT_BRAND := OnePlus
 TARGET_VENDOR := oneplus
 TARGET_VENDOR_PRODUCT_NAME := onyx
 
-# FMRadio
-PRODUCT_PACKAGES += \
-    FMRadio
-	
-PRODUCT_BUILD_PROP_OVERRIDES += \
- 	DEVICE_MAINTAINERS="Nimit Mehta (CheckYourScreen)"
-
-	
