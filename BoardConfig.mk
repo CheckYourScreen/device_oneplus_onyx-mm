@@ -38,7 +38,7 @@ TARGET_CPU_VARIANT := krait
 # Uber Optimizations
 CLANG_O3 := false
 STRICT_ALIASING := false
-KRAIT_TUNINGS := false
+KRAIT_TUNINGS := true
 GRAPHITE_OPTS := false
 ENABLE_GCCONLY := false
 
