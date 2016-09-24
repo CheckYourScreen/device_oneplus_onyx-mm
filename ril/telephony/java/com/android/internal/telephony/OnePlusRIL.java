@@ -19,6 +19,8 @@ package com.android.internal.telephony;
 import static com.android.internal.telephony.RILConstants.*;
 
 import android.content.Context;
+import android.os.AsyncResult;
+import android.os.Message;
 import android.os.Parcel;
 
 /**
