@@ -54,5 +54,32 @@ public class OnePlusRIL extends RIL implements CommandsInterface {
         }
         return failCause;
     }
+    @Override
+    public void getRadioCapability(Message response) {
+        riljLog("getRadioCapability: returning static radio capability");
+        if (response != null) {
+            Object ret = makeStaticRadioCapability();
+            AsyncResult.forMessage(response, ret, null);
+            response.sendToTarget();
+        }
+    }
+
+    @Override
+    public void
+    setNetworkSelectionModeManual(String operatorNumeric, Message response) {
+        RILRequest rr
+                = RILRequest.obtain(RIL_REQUEST_SET_NETWORK_SELECTION_MANUAL,
+                                    response);
+
+        if (RILJ_LOGD) riljLog(rr.serialString() + "> " + requestToString(rr.mRequest)
+                    + " " + operatorNumeric);
+
+        rr.mParcel.writeInt(2);
+        rr.mParcel.writeString(operatorNumeric);
+        rr.mParcel.writeString("2"); // NOCHANGE
+
+        send(rr);
+    }
+}
 }
 
