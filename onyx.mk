@@ -18,13 +18,16 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from onyx device
 $(call inherit-product, device/oneplus/onyx/device.mk)
 
-# Inherit some common GZR stuff.
-$(call inherit-product, vendor/broken/config/common_full_phone.mk)
+# Inherit some common stuff.
+$(call inherit-product, vendor/aicp/config/common.mk)
+
+# Inherit telephony stuff
+$(call inherit-product, vendor/aicp/configs/telephony.mk)
 
 # Call the proprietary setup
 $(call inherit-product-if-exists, vendor/oneplus/onyx/onyx-vendor.mk)
 
-PRODUCT_NAME := broken_onyx
+PRODUCT_NAME := aicp_onyx
 PRODUCT_DEVICE := onyx
 PRODUCT_MANUFACTURER := OnePlus
 
@@ -34,11 +37,10 @@ PRODUCT_BRAND := OnePlus
 TARGET_VENDOR := oneplus
 TARGET_VENDOR_PRODUCT_NAME := onyx
 
-# FMRadio
-PRODUCT_PACKAGES += \
-    FMRadio
-	
 PRODUCT_BUILD_PROP_OVERRIDES += \
  	DEVICE_MAINTAINERS="Nimit Mehta (CheckYourScreen)"
 
-	
+# Boot animation
+TARGET_SCREEN_HEIGHT := 1920
+TARGET_SCREEN_WIDTH := 1080
+-include vendor/aicp/configs/bootanimation.mk	
